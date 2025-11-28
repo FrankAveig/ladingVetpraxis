@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initFloatingCTA();
   initSmoothScroll();
   initMasterclassSelector();
+  initInscriptionModal();
 });
 
 /**
@@ -237,5 +238,120 @@ function initMasterclassSelector() {
       }, 150);
     });
   });
+}
+
+/**
+ * Inscription Modal functionality
+ */
+function initInscriptionModal() {
+  const modal = document.getElementById('inscriptionModal');
+  const modalClose = document.getElementById('modalClose');
+  const form = document.getElementById('inscriptionForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const modalSuccess = document.getElementById('modalSuccess');
+  const successClose = document.getElementById('successClose');
+  
+  if (!modal || !form) return;
+  
+  // Open modal when clicking inscription links
+  const inscriptionLinks = document.querySelectorAll('a[href="#inscripcion"]');
+  inscriptionLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      openModal();
+    });
+  });
+  
+  // Close modal handlers
+  modalClose.addEventListener('click', closeModal);
+  successClose.addEventListener('click', closeModal);
+  
+  // Close on overlay click
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+  
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+  
+  // Form submission
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoading = submitBtn.querySelector('.btn-loading');
+    
+    // Show loading state
+    btnText.style.display = 'none';
+    btnLoading.style.display = 'flex';
+    submitBtn.disabled = true;
+    
+    // Get form data
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      country: document.getElementById('country').value,
+      company: document.getElementById('company').value,
+      phone: '99999999999',
+      source_page: 'vetpraxis conferencia virtual',
+      message: 'no aplica',
+      assigned_to: 1
+    };
+    
+    try {
+      const response = await fetch('https://api-leads-roan.vercel.app/api/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      if (response.ok) {
+        // Show success state
+        form.style.display = 'none';
+        modalSuccess.style.display = 'block';
+      } else {
+        throw new Error('Error en el servidor');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Hubo un error al enviar tu inscripción. Por favor intenta de nuevo.');
+      
+      // Reset button state
+      btnText.style.display = 'inline';
+      btnLoading.style.display = 'none';
+      submitBtn.disabled = false;
+    }
+  });
+  
+  function openModal() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    
+    // Reset form after closing
+    setTimeout(function() {
+      form.reset();
+      form.style.display = 'flex';
+      modalSuccess.style.display = 'none';
+      
+      const btnText = submitBtn.querySelector('.btn-text');
+      const btnLoading = submitBtn.querySelector('.btn-loading');
+      btnText.style.display = 'inline';
+      btnLoading.style.display = 'none';
+      submitBtn.disabled = false;
+    }, 300);
+  }
 }
 

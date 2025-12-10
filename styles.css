@@ -1574,7 +1574,19 @@ a {
 
 @media (min-width: 1024px) {
   .timeline-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .timeline-grid {
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .timeline-grid {
     gap: 1.5rem;
   }
 }
@@ -1638,6 +1650,12 @@ a {
 @media (min-width: 1024px) {
   .timeline-card {
     margin-top: 2rem;
+    padding: 1.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .timeline-card {
     padding: 1.5rem;
   }
 }
@@ -1675,7 +1693,19 @@ a {
 
 @media (min-width: 768px) {
   .timeline-date {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .timeline-date {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .timeline-date {
+    font-size: 0.8rem;
   }
 }
 
@@ -1721,8 +1751,20 @@ a {
 
 @media (min-width: 768px) {
   .timeline-day {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
     margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .timeline-day {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .timeline-day {
+    font-size: 1.625rem;
   }
 }
 
@@ -1760,7 +1802,20 @@ a {
 
 @media (min-width: 768px) {
   .timeline-topic {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .timeline-topic {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+}
+
+@media (min-width: 1280px) {
+  .timeline-topic {
+    font-size: 0.8rem;
   }
 }
 
@@ -2701,6 +2756,7 @@ a {
 .timeline-grid .timeline-item:nth-child(3) { transition-delay: 0.3s; }
 .timeline-grid .timeline-item:nth-child(4) { transition-delay: 0.4s; }
 .timeline-grid .timeline-item:nth-child(5) { transition-delay: 0.5s; }
+.timeline-grid .timeline-item:nth-child(6) { transition-delay: 0.6s; }
 
 /* ===================================
    MODAL DE INSCRIPCIÓN

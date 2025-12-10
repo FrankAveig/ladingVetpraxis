@@ -18,31 +18,37 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 const masterclassData = {
   1: {
-    label: 'Clase 1 de 5',
-    title: 'Finanzas para Clínicas Veterinarias',
-    desc: 'Aprende a elaborar un presupuesto anual paso a paso, controlar tus gastos de forma efectiva, planificar compras estratégicas y tomar decisiones financieras más inteligentes. Descubre cómo proyectar ingresos, identificar gastos innecesarios y crear un plan financiero sólido para el 2026.',
-    features: ['Presupuesto anual', 'Control de gastos', 'Plantilla incluida']
-  },
-  2: {
-    label: 'Clase 2 de 5',
+    label: 'Clase 1 de 6',
     title: 'Marketing Digital para Veterinarias',
     desc: 'Descubre estrategias simples y efectivas para atraer nuevos clientes sin gastar de más. Aprenderás a mejorar tu presencia en redes sociales, crear contenido que conecte con los tutores de mascotas, y técnicas de marketing local que realmente funcionan para clínicas veterinarias.',
     features: ['Redes sociales', 'Marketing local', 'Contenido efectivo']
   },
-  3: {
-    label: 'Clase 3 de 5',
+  2: {
+    label: 'Clase 2 de 6',
     title: 'Fidelización de Clientes',
     desc: 'Aprende las técnicas más efectivas para que tus clientes regresen una y otra vez, y además recomienden tu clínica. Descubrirás cómo crear programas de fidelidad, reducir las ausencias a citas, mejorar la comunicación con los tutores y generar recomendaciones orgánicas.',
     features: ['Programas de fidelidad', 'Reducir ausencias', 'Más recomendaciones']
   },
+  3: {
+    label: 'Clase 3 de 6',
+    title: 'Finanzas para Clínicas Veterinarias',
+    desc: 'Aprende a elaborar un presupuesto anual paso a paso, controlar tus gastos de forma efectiva, planificar compras estratégicas y tomar decisiones financieras más inteligentes. Descubre cómo proyectar ingresos, identificar gastos innecesarios y crear un plan financiero sólido para el 2026.',
+    features: ['Presupuesto anual', 'Control de gastos', 'Plantilla incluida']
+  },
   4: {
-    label: 'Clase 4 de 5',
+    label: 'Clase 4 de 6',
     title: 'Control Financiero e Inventario',
     desc: 'Domina tu flujo de caja y aprende a controlar tu inventario de manera eficiente. Te enseñamos a entender tus números sin ser contador, evitar pérdidas por vencimientos, optimizar tus compras y tener siempre el stock necesario sin sobrecostos.',
     features: ['Flujo de caja', 'Control de inventario', 'Evitar pérdidas']
   },
   5: {
-    label: 'Clase 5 de 5',
+    label: 'Clase 5 de 6',
+    title: 'Inteligencia Artificial aplicada a la Gestión Clínica',
+    desc: 'Aprende a usar la inteligencia artificial para analizar la información de tu clínica, optimizar procesos, automatizar tareas clave y tomar decisiones estratégicas basadas en datos reales. Descubre cómo aplicar estas mejoras e integrar la IA en las operaciones diarias de tu negocio.',
+    features: ['Gestión clínica inteligente', 'Decisiones estratégicas', 'Procesos automatizados']
+  },
+  6: {
+    label: 'Clase 6 de 6',
     title: 'Procesos Clínicos Inteligentes',
     desc: 'Optimiza la atención en tu clínica con procesos simples y efectivos. Aprende a estandarizar consultas, cirugías e internamientos, mejorar los tiempos de atención, reducir errores y ofrecer una experiencia excepcional a cada paciente y tutor que te visite.',
     features: ['Procesos estandarizados', 'Mejor atención', 'Menos errores']

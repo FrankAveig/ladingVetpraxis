@@ -37,15 +37,15 @@ const masterclassData = {
   },
   4: {
     label: 'Clase 4 de 6',
-    title: 'Control Financiero e Inventario',
-    desc: 'Domina tu flujo de caja y aprende a controlar tu inventario de manera eficiente. Te enseñamos a entender tus números sin ser contador, evitar pérdidas por vencimientos, optimizar tus compras y tener siempre el stock necesario sin sobrecostos.',
-    features: ['Flujo de caja', 'Control de inventario', 'Evitar pérdidas']
+    title: 'Inteligencia Artificial aplicada a la Gestión Clínica',
+    desc: 'Aprende a utilizar la Inteligencia Artificial para analizar la información de tu clínica, optimizar procesos, automatizar tareas clave y tomar decisiones estratégicas basadas en datos reales. Descubre cómo aplicar estas mejoras e integrar la IA en el día a día de tu negocio.',
+    features: ['Gestión clínica inteligente', 'Decisiones estratégicas', 'Procesos automatizados']
   },
   5: {
     label: 'Clase 5 de 6',
-    title: 'Inteligencia Artificial aplicada a la Gestión Clínica',
-    desc: 'Aprende a usar la inteligencia artificial para analizar la información de tu clínica, optimizar procesos, automatizar tareas clave y tomar decisiones estratégicas basadas en datos reales. Descubre cómo aplicar estas mejoras e integrar la IA en las operaciones diarias de tu negocio.',
-    features: ['Gestión clínica inteligente', 'Decisiones estratégicas', 'Procesos automatizados']
+    title: 'Optimización del Laboratorio con Automatización Digital',
+    desc: 'Optimiza el funcionamiento del laboratorio de tu clínica con procesos digitales simples y eficientes. Aprende a automatizar registros, organizar resultados, reducir errores manuales y mejorar los tiempos de entrega, garantizando mayor control, trazabilidad y calidad en cada análisis realizado.',
+    features: ['Procesos automatizados', 'Mayor control y trazabilidad', 'Menos errores operativos']
   },
   6: {
     label: 'Clase 6 de 6',
